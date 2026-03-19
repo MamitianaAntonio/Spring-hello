@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,9 +21,10 @@ public class StudentController {
     private List<Student> students = new ArrayList<>();
 
     @PostMapping
-    public List<Student> addStudents(@RequestBody List<Student> newStudents) {
+    public ResponseEntity<List<Student>> addStudents(@RequestBody List<Student> newStudents) {
         students.addAll(newStudents);
-        return students;
+        return ResponseEntity.status(HttpStatus.CREATED)
+            .body(students);
     }
 
     @GetMapping
