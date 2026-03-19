@@ -2,7 +2,7 @@ package com.antonio.hello_spring.model;
 
 public class Student {
     private String reference;
-    private String firstname;
+    private String firstName;
     private String lastName;
     private int age;
 
@@ -11,7 +11,7 @@ public class Student {
 
     public Student(String reference, String firstName, String lastName, int age) {
         this.reference = reference;
-        this.firstname = firstName;
+        this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
     }
@@ -25,11 +25,11 @@ public class Student {
     }
 
     public String getFirstname() {
-        return firstname;
+        return firstName;
     }
 
     public void setFirstname(String firstname) {
-        this.firstname = firstname;
+        this.firstName = firstname;
     }
 
     public String getLastName() {
