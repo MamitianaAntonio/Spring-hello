@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.antonio.hello_spring.model.Student;
 
 @RestController
-@RequestMapping("/student")
+@RequestMapping("/students")
 public class StudentController {
     private List<Student> students = new ArrayList<>();
 
